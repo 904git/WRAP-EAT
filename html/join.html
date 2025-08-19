@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRAP-EAT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body id="join">
+    <header>
+        <div class="inner">
+            <div id="headerTop">
+                <p>회원가입</p>
+                <div class="header-icon flex">
+                    <div class="header-left-icon">
+                        <a href="login.html">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                    </div>
+                    <div class="header-right-icon flex">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="inner">
+            <form action="" method="post" id="joinForm">
+                <div class="form-section">
+                    <label for="userId">아이디</label>
+                    <input type="text" id="userId" class="input-border input-sn" placeholder="아이디를 입력해주세요." size="12" min="4" max="12" required>
+                    <input type="button" value="중복 확인" class="btn btn-square btn-small btn-primary-border">
+                    <p>4~12자 / 영문 대소문자, 숫자 조합</p>
+                </div>
+                <div class="form-section">
+                    <label for="userPw">비밀번호</label>
+                    <input type="password" id="userPw" class="input-border input-sl" placeholder="비밀번호를 입력해주세요." size="20" min="6" max="20" required>
+                    <input type="password" id="userPwCnf" class="input-border input-sl" placeholder="비밀번호를 한번 더 입력해주세요." size="20" min="6" max="20" required>
+                    <p>6~20자 / 영문 대소문자, 숫자, 특수문자 중 2개 이상 조합</p>
+                </div>
+                <div class="form-section">
+                    <label for="userPhone">휴대폰 번호</label>
+                    <input type="tel" id="userPhone" class="input-border input-sn" placeholder="-없이 11자리 입력해주세요." required>
+                    <input type="button" value="본인 인증" class="btn btn-square btn-small btn-primary-border">
+                </div>
+                <div class="form-section">
+                    <label for="userId">주소</label>
+                    <input type="text" id="userLoc" class="input-border input-sn" placeholder="도로명 주소" disabled>
+                    <input type="button" value="주소 검색" class="btn btn-square btn-small btn-primary-border">
+                    <input type="text" id="userLocDetail" class="input-border input-sl" placeholder="상세 주소" required>
+                </div>
+                <div class="form-section">
+                    <input type="submit" value="가입하기" class="btn btn-round btn-large btn-primary-bg" id="joinBtn">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

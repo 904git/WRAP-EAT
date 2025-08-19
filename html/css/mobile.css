@@ -1,0 +1,92 @@
+/* layout style */
+@media screen and (max-width: 767px) {
+    /* header search style */
+    #header-form:hover .form-section input#mainSearch,
+    .form-section input#mainSearch:active,
+    .form-section input#mainSearch:focus {
+        width: 100px;
+    }
+    /* index.html */
+    /*banner style*/
+    .banner-box > a {
+        height: 150px;
+    }
+    /* regular, recently style */
+    .restaurant-container { /* mobile */
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+    .restaurant-box { /* mobile */
+        font-weight: 500;
+        width: 200px;
+    }
+    .restaurant-box img { /* mobile */
+        width: 200px;
+        height: 120px;
+        margin-bottom: 10px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    /* sale style */
+    .sale-box { /* mobile */
+        width: 300px;
+        height: 150px;
+        flex-shrink: 0;
+    }
+    /* bookmark.html */
+    /* restaurant-list */
+    .restaurant-list { /* mobile */
+        padding-top: 30px;
+        padding-bottom: 100px;
+        flex-direction: column;
+    }
+    .restaurant-list > li > a { /* mobile */
+        background: #fff;
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        position: relative;
+        gap: 20px;
+    }
+    .restaurant-list > li > a img { /* 식당 썸네일 */ /* mobile */
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    .restaurant-list > li .restaurant-info { /* mobile */
+        width: calc(100% - 100px);
+    }
+    .sale-label { /* 할인 라벨 */ /* mobile */
+        background: url(../images/label.png) no-repeat 0 0;
+        background-size: contain;
+        width: 170px;
+        height: 20px;
+        line-height: 20px;
+        text-indent: 10px;
+        font-size: 10px;
+        color: var(--sub-text-color);
+    }
+    /* cart.html */
+    /* .cart-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    } */
+    /* order.html */
+    .order-top,
+    .order-bottom { /* mobile */
+        padding-top: 10px;
+    }
+    .order-bottom {
+        padding-bottom: 80px;
+    }
+    /* receipt style */
+    .receipt-head > p:first-child,
+    .receipt > .menu-list > li > *:first-child { /* mobile */
+        width: 165px;
+        flex-shrink: 0;
+    }
+}

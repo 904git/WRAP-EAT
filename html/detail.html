@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRAP-EAT</title>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=49b3567591218552df61caea514da4f7"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/master.css" type="text/css">
+</head>
+<body id="detail">
+    <header>
+        <div class="inner">
+            <div id="headerTop">
+                <div class="header-icon flex">
+                    <div class="header-left-icon">
+                        <a href="javascript:history.back();">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                    </div>
+                    <div class="header-right-icon flex">
+                        <form action="" method="post" id="header-form" class="flex">
+                            <div class="form-section">
+                                <input type="text" id="mainSearch" placeholder="SEARCH">
+                                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                         </form>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-fw"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="restaurant-img">
+            <img src="images/restaurant/sosobrunch.jpg" alt="소소한 브런치">
+        </div>
+        <div class="restaurant-detail">
+            <section class="restaurant-info">
+                <div class="inner">
+                    <h2>소소한 브런치</h2>
+                    <div class="review-info flex">
+                        <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>131</p>
+                        <a href="#" class="detail-btn">가게정보,원산지</a>
+                    </div>
+                    <div class="location">
+                        <h5>위치 정보</h5>
+                        <p class="address">서울 동작구 상도로15길 98 1층</p>
+                        <div class="map-container" id="map-container"></div>
+                    </div>
+                    <a href="#" class="btn btn-square btn-secondary-bg coupon">단골 쿠폰 확인하기</a>
+                </div>
+            </section>
+            <section class="menu-conatiner">
+                <div class="inner">
+                    <h3>추천 메뉴</h3>
+                    <ul class="menu-list">
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/detail/menu1.jpg" alt="새우 & 크림 뇨끼">
+                                <div class="menu-info">
+                                    <h4>새우 & 크림 뇨끼(SHRIMP GNOCCHI)</h4>
+                                    <p class="description">새우, 뇨끼, 크러쉬드 페퍼, 크림, 양파, 감자, 옥수수, 케일, 파마산 치즈, 파</p>
+                                    <p>16,000원</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/detail/menu2.jpg" alt="가지 볼로네즈 라자냐">
+                                <div class="menu-info">
+                                    <h4>가지 볼로네즈 라자냐(BOLOGNESE LASAGNA)</h4>
+                                    <p class="description">가지, 라자냐 파스타, 볼로네즈 소스, 모짜렐라 치즈</p>
+                                    <p>16,000원</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/detail/menu3.jpg" alt="소소브런치 + 아메리카노 세트">
+                                <div class="menu-info">
+                                    <h4>소소브런치 + 아메리카노 세트</h4>
+                                    <p class="description">아메리카노, 프렌치 토스트 2장, 계란, 베이컨, 구운토마토</p>
+                                    <p>12,000원</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="menu-conatiner">
+                <div class="inner">
+                    <h3>에피타이저</h3>
+                    <ul class="menu-list">
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/detail/menu4.jpg" alt="콥 샐러드">
+                                <div class="menu-info">
+                                    <h4>콥 샐러드(COBB SALAD)</h4>
+                                    <p class="description">슈퍼푸드 퀴노아 & 렌틸콩, 베이컨, 삶은 계란, 토마토 살사, 올리브, 아보카도, 믹스 야채, 옥수수</p>
+                                    <p>12,500원</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/detail/menu5.jpg" alt="구운 단호박 샐러드">
+                                <div class="menu-info">
+                                    <h4>구운 단호박 샐러드</h4>
+                                    <p class="description">슈퍼푸드 퀴노아 & 렌틸콩, 구운호박, 비트졸임, 아보카도, 페타치즈, 믹스견과류</p>
+                                    <p>12,500원</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/detail/menu6.jpg" alt="브로컬리 감자 크림스프">
+                                <div class="menu-info">
+                                    <h4>브로컬리 감자 크림스프(BROCCOLI POTATO)</h4>
+                                    <p class="description">감자, 브로콜리, 베이컨, 모짜렐라 치즈, 크림 , 크루통</p>
+                                    <p>7,000원</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="inner">
+            <p>유의사항</p>
+            <ul class="note">
+                <li>메뉴 사진은 연출된 이미지로 실제 조리된 음식과 다를 수 있습니다.</li>
+                <li>상단 메뉴 및 가격은 업소에서 제공한 정보를 기준으로 작성되었으며 변동 될 수 있습니다.</li>
+                <li>메뉴별 리뷰 개수는 해당 메뉴가 포함된 주문에 대하여 고객이 남겨주신 리뷰를 기반으로 산출된 것입니다.</li>
+                <li>WRAP EAT은 상품거래에 대한 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 따라서 WRAP EAT은 상품거래정보 및 거래에 대하여 책임을 지지 않습니다.</li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        var mapContainer = document.getElementById('map-container'), // 지도를 표시할 div 
+		    mapOption = {
+		        center: new kakao.maps.LatLng(37.504360, 126.936161), // 지도의 중심좌표
+		        level: 3, // 지도의 확대 레벨
+		        mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+		    }; 
+
+		// 지도를 생성한다 
+		var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 지도에 마커를 생성하고 표시한다
+		var marker = new kakao.maps.Marker({
+		    position: new kakao.maps.LatLng(37.504360, 126.936161), // 마커의 좌표
+		    map: map // 마커를 표시할 지도 객체
+		});
+    </script>
+</body>
+</html>

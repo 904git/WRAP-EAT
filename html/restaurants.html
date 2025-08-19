@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRAP-EAT</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body id="restaurants">
+    <header>
+        <div class="inner">
+            <div id="headerTop">
+                <p>전체</p>
+                <div class="header-icon flex">
+                    <div class="header-left-icon">
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                    </div>
+                    <div class="header-right-icon flex">
+                         <form action="" method="post" id="header-form" class="flex">
+                            <div class="form-section">
+                                <input type="text" id="mainSearch" placeholder="SEARCH">
+                                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                         </form>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-fw"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="gnb">
+        <div class="inner">
+            <ul class="flex">
+                <li>
+                    <a href="index.html" class="active">
+                        <i class="fa-solid fa-house"></i>
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="status.html">
+                        <i class="fa-solid fa-map"></i>
+                        <p>지도</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="bookmark.html">
+                        <i class="fa-solid fa-heart"></i>
+                        <p>찜</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendar.html">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <p>주문내역</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                        <p>마이랩잇</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="lnb">
+        <div class="inner">
+            <ul class="category-container flex">
+                <li>
+                    <a href="restaurants.html" id="all">
+                        <img src="images/icon/All.png" alt="전체">
+                        <p>전체</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="snackfood">
+                        <img src="images/icon/SnackFood.png" alt="분식">
+                        <p>분식</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="fastfood">
+                        <img src="images/icon/FastFood.png" alt="패스트푸드">
+                        <p>패스트푸드</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="chinafood">
+                        <img src="images/icon/ChinaFood.png" alt="중식">
+                        <p>중식</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="japanfood">
+                        <img src="images/icon/JapanFood.png" alt="돈까스,회">
+                        <p>돈까스,회</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="koreafood">
+                        <img src="images/icon/KoreaFood.png" alt="한식">
+                        <p>한식</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="chicken">
+                        <img src="images/icon/Chicken.png" alt="치킨">
+                        <p>치킨</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="pizza">
+                        <img src="images/icon/Pizza.png" alt="피자">
+                        <p>피자</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="westernfood">
+                        <img src="images/icon/WesternFood.png" alt="양식">
+                        <p>양식</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="desert">
+                        <img src="images/icon/Desert.png" alt="디저트">
+                        <p>디저트</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="soup">
+                        <img src="images/icon/Soup.png" alt="찜,탕">
+                        <p>찜,탕</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="bossam">
+                        <img src="images/icon/Bossam.png" alt="족발,보쌈">
+                        <p>족발,보쌈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="pork">
+                        <img src="images/icon/Pork.png" alt="고기">
+                        <p>고기</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="asian">
+                        <img src="images/icon/Asian.png" alt="아시안">
+                        <p>아시안</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="night">
+                        <img src="images/icon/Night.png" alt="야식">
+                        <p>야식</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="restaurants.html" id="packed">
+                        <img src="images/icon/Packed.png" alt="도시락">
+                        <p>도시락</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="inner">
+            <section class="filter flex">
+                <a href="#" class="filter-box flex"><span><i class="fa-solid fa-map"></i></span>지도</a>
+                <div class="filter-box sort-btn flex">
+                    <p>기본순</p>
+                    <span><i class="fa-solid fa-angles-down"></i></span>
+                </div>
+                <a href="#" class="filter-box flex"><span><i class="fa-solid fa-filter"></i></span>기타</a>
+            </section>
+            <section>
+                <div class="restaurant-content">
+                    <ul class="restaurant-list all">
+                        <!-- 전체 -->
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/sosobrunch.jpg" alt="소소한 브런치">
+                                <div class="restaurant-info">
+                                    <h4>소소한 브런치</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>131</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>309m 도보 4분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/tteokbokki.gif" alt="동대문 엽기떡볶이 신대방삼거리역점">
+                                <div class="restaurant-info">
+                                    <h4>동대문 엽기떡볶이 신대방삼거리역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,354</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>130m 도보 1분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/restaurant/pizza.jpg" alt="발리스 피자">
+                                <div class="restaurant-info">
+                                    <h4>발리스 피자</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>502</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>514m 도보 11분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/restaurant/pastabang.jpg" alt="파스타 뱅 상도점">
+                                <div class="restaurant-info">
+                                    <h4>파스타 뱅 상도점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.9</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>507</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>192m 도보 2분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/kimbab.jpg" alt="김밥천국 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>김밥천국 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.2</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>3,548</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>336m 도보 4분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/tanghuo.png" alt="탕화쿵푸마라탕 신림점">
+                                <div class="restaurant-info">
+                                    <h4>탕화쿵푸마라탕 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.6</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,098</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>302m 도보 4분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/restaurant/poke.jpg" alt="파머스포케 노량진점">
+                                <div class="restaurant-info">
+                                    <h4>파머스포케 노량진점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.9</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>414</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>688m 도보 17분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">전 메뉴 5% 할인</div>
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/shackshack.jpg" alt="쉐이크쉑 신림점">
+                                <div class="restaurant-info">
+                                    <h4>쉐이크쉑 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.4</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,124</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>335m 도보 4분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex">
+                                <img src="images/restaurant/diet.jpg" alt="프레퍼스 다이어트푸드 노량진점">
+                                <div class="restaurant-info">
+                                    <h4>프레퍼스 다이어트푸드 노량진점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,800</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>695m 도보 17분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/dookki.png" alt="두끼 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>두끼 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.6</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>298</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>223m 도보 3분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/lotteria.jpg" alt="롯데리아 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>롯데리아 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.3</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>3,134</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>302m 도보 3분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/wehalmae.png" alt="우리할매떡볶이 신풍역점">
+                                <div class="restaurant-info">
+                                    <h4>우리할매떡볶이 신풍역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.4</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>877</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>836m 도보 10분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/bonggu.png" alt="봉구가래떡볶이 신림점">
+                                <div class="restaurant-info">
+                                    <h4>봉구가래떡볶이 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.3</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>461</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>628m 도보 8분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/kfc.png" alt="KFC 신림역">
+                                <div class="restaurant-info">
+                                    <h4>KFC 신림역</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.1</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,093</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>531m 도보 6분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/chunli.png" alt="춘리마라탕 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>춘리마라탕 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.7</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>3,872</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>789m 도보 8분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/burgerking.png" alt="버거킹 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>버거킹 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.5</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>3,809</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>411m 도보 5분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/mcdonalds.jpg" alt="맥도날드 신림점">
+                                <div class="restaurant-info">
+                                    <h4>맥도날드 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.1</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>2,882</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>701m 도보 8분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/subway.jpg" alt="써브웨이 신림점">
+                                <div class="restaurant-info">
+                                    <h4>써브웨이 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.3</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>2,629</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>689m 도보 8분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/gan.jfif" alt="불맛전문 관사부 간짬뽕 신림본점">
+                                <div class="restaurant-info">
+                                    <h4>불맛전문 관사부 간짬뽕 신림본점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.5</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>28</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>119m 도보 1분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/yongyong.png" alt="용용선생 신림점">
+                                <div class="restaurant-info">
+                                    <h4>용용선생 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.1</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>974</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>511m 도보 6분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/licun.png" alt="리춘시장 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>리춘시장 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.2</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>154</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>589m 도보 6분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="restaurant-list snackfood">
+                        <!-- 분식 -->
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/tteokbokki.gif" alt="동대문 엽기떡볶이 신대방삼거리역점">
+                                <div class="restaurant-info">
+                                    <h4>동대문 엽기떡볶이 신대방삼거리역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,354</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>130m 도보 1분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/dookki.png" alt="두끼 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>두끼 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.6</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>298</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>223m 도보 3분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/kimbab.jpg" alt="김밥천국 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>김밥천국 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.2</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>3,548</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>336m 도보 4분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/wehalmae.png" alt="우리할매떡볶이 신풍역점">
+                                <div class="restaurant-info">
+                                    <h4>우리할매떡볶이 신풍역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.4</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>877</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>836m 도보 10분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/bonggu.png" alt="봉구가래떡볶이 신림점">
+                                <div class="restaurant-info">
+                                    <h4>봉구가래떡볶이 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.3</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>461</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>628m 도보 8분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="restaurant-list fastfood">
+                        <!-- 패스트푸드 -->
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/kfc.png" alt="KFC 신림역">
+                                <div class="restaurant-info">
+                                    <h4>KFC 신림역</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.1</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,093</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>531m 도보 6분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/shackshack.jpg" alt="쉐이크쉑 신림점">
+                                <div class="restaurant-info">
+                                    <h4>쉐이크쉑 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.4</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,124</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>335m 도보 4분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/lotteria.jpg" alt="롯데리아 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>롯데리아 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.3</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>3,134</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>302m 도보 3분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/burgerking.png" alt="버거킹 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>버거킹 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.5</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>3,809</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>411m 도보 5분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/mcdonalds.jpg" alt="맥도날드 신림점">
+                                <div class="restaurant-info">
+                                    <h4>맥도날드 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.1</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>2,882</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>701m 도보 8분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/subway.jpg" alt="써브웨이 신림점">
+                                <div class="restaurant-info">
+                                    <h4>써브웨이 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.3</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>2,629</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>689m 도보 8분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="restaurant-list chinafood">
+                        <!-- 중식 -->
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/gan.jfif" alt="불맛전문 관사부 간짬뽕 신림본점">
+                                <div class="restaurant-info">
+                                    <h4>불맛전문 관사부 간짬뽕 신림본점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.5</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>28</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>119m 도보 1분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/tanghuo.png" alt="탕화쿵푸마라탕 신림점">
+                                <div class="restaurant-info">
+                                    <h4>탕화쿵푸마라탕 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.6</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,098</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>302m 도보 4분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">5000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/yongyong.png" alt="용용선생 신림점">
+                                <div class="restaurant-info">
+                                    <h4>용용선생 신림점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.1</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>974</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>511m 도보 6분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <div class="sale-label">3000원 할인 쿠폰</div>
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/licun.png" alt="리춘시장 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>리춘시장 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.2</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>154</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>589m 도보 6분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="detail.html" class="flex">
+                                <img src="images/restaurant/chunli.png" alt="춘리마라탕 신림역점">
+                                <div class="restaurant-info">
+                                    <h4>춘리마라탕 신림역점</h4>
+                                    <div class="review-info flex">
+                                        <p><span class="star"><i class="fa-solid fa-star"></i></span>4.7</p>
+                                        <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>3,872</p>
+                                        <p><span><i class="fa-solid fa-map-pin"></i></span>789m 도보 8분</p>
+                                    </div>
+                                    <div class="info-bottom flex">
+                                        <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </section>
+        </div>
+    </main>
+    <div class="option-modal">
+        <div class="modal-bg"></div>
+        <div class="sort-option inner">
+            <p>정렬</p>
+            <ul>
+                <li class="active">기본순<span><i class="fa-solid fa-check"></i></span></li>
+                <li>추천순<span><i class="fa-solid fa-check"></i></span></li>
+                <li>주문 많은 순<span><i class="fa-solid fa-check"></i></span></li>
+                <li>별점 높은 순<span><i class="fa-solid fa-check"></i></span></li>
+                <li>가까운 순<span><i class="fa-solid fa-check"></i></span></li>
+                <li>찜 많은 순<span><i class="fa-solid fa-check"></i></span></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        /* 카테고리 클릭 시 컨텐츠 변경 */
+        $('.category-container > li > a').click(function(e){
+            e.preventDefault();
+            $('#headerTop > p').text($(this).children('p').text());
+            $('.restaurant-content > ul').css('display', 'none');
+            $(`.restaurant-content > ul.${$(this).attr('id')}`).css('display', 'flex');
+        });
+        /* 정렬 버튼 클릭시 모달 이벤트 */
+        $('.sort-option > ul > li').click(function(){
+            $('.sort-option > ul > li').removeClass('active');
+            $(this).addClass('active');
+            $('.option-modal').toggleClass('show');
+            $('.sort-btn > p').text($(this).text());
+        });
+        $('.sort-btn').click(function(){
+            $('.option-modal').toggleClass('show');
+        });
+        $('.modal-bg').click(function(){
+            $('.option-modal').toggleClass('show');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRAP-EAT</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body id="calendar">
+    <header>
+        <div class="inner">
+            <div id="headerTop">
+                <p>주문내역</p>
+                <div class="header-icon flex">
+                    <div class="header-left-icon">
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                    </div>
+                    <div class="header-right-icon flex">
+                        <form action="" method="post" id="header-form" class="flex">
+                            <div class="form-section">
+                                <input type="text" id="mainSearch" placeholder="SEARCH">
+                                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                         </form>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-fw"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="gnb">
+        <div class="inner">
+            <ul class="flex">
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="status.html">
+                        <i class="fa-solid fa-map"></i>
+                        <p>지도</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="bookmark.html">
+                        <i class="fa-solid fa-heart"></i>
+                        <p>찜</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendar.html" class="active">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <p>주문내역</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                        <p>마이랩잇</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="calendar-container">
+            <div class="inner">
+                <div class="calendar-nav flex">
+                    <span class="prev"><i class="fa-solid fa-angle-left"></i></span>
+                    <p></p>
+                    <span class="next"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <ul class="week flex">
+                    <li>Sun</li>
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                </ul>
+                <ul class="day flex"></ul>
+            </div>
+        </section>
+        <section class="order-container">
+            <div class="inner">
+                <p class="date">2025년 8월 8일</p>
+                <p class="empty">음식을 주문한 내역이 없습니다.</p>
+                <ul class="order-list" id="item1">
+                    <li>
+                        <div class="order-info flex">
+                            <a href="#" class="restaurant-profile flex">
+                                <img src="images/restaurant/lotteria.jpg" alt="롯데리아">
+                                <p class="name">롯데리아</p>
+                            </a>
+                            <div class="detail flex">
+                                <a href="#">주문상세</a>
+                                <span class="active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                한우불고기버거 세트 <span>1개</span>
+                            </li>
+                            <li>
+                                핫크리스피버거 세트 <span>1개</span>
+                            </li>
+                        </ul>
+                        <div class="menu-price flex">
+                            <p>결제금액</p>
+                            <p>18,000원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="order-info flex">
+                            <a href="#" class="restaurant-profile flex">
+                                <img src="images/restaurant/tteokbokki.gif" alt="동대문 엽기 떡볶이">
+                                <p class="name">동대문 엽기떡볶이 신대방삼거리역점</p>
+                            </a>
+                            <div class="detail flex">
+                                <a href="#">주문상세</a>
+                                <span><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                엽기떡볶이 <span>1개</span>
+                            </li>
+                            <li>
+                                김말이 튀김 <span>1개</span>
+                            </li>
+                        </ul>
+                        <div class="menu-price flex">
+                            <p>결제금액</p>
+                            <p>25,000원</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="order-list" id="item2">
+                    <li>
+                        <div class="order-info flex">
+                            <a href="#" class="restaurant-profile flex">
+                                <img src="images/restaurant/sosobrunch.jpg" alt="소소한 브런치">
+                                <p class="name">소소한 브런치</p>
+                            </a>
+                            <div class="detail flex">
+                                <a href="#">주문상세</a>
+                                <span class="active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                새우 & 크린 뇨끼(SHRIMP GNOCCHI) <span>1개</span>
+                            </li>
+                            <li>
+                                구운 단호박 샐러드 <span>1개</span>
+                            </li>
+                        </ul>
+                        <div class="menu-price flex">
+                            <p>결제금액</p>
+                            <p>28,500원</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script>
+        let date = new Date();
+        let curYear = date.getFullYear(), curMonth = date.getMonth() + 1, curDate = date.getDate();
+        function setDateNav(year, month){
+            $('.calendar-nav > p').text(`${year}년 ${month}월`);
+        }
+        function getLastDayOfMonth(year, month){
+            return new Date(year, month, 0);
+        }
+        function setCalendar(year, month, date){
+            setDateNav(year, month);
+            $('.date').text(`${year}년 ${month}월 ${date}일`);
+            let lastDayOfMonth = getLastDayOfMonth(year, month).getDate();
+            let log = [[2025, 8, 1], [2025, 8, 2]];
+            log.sort();
+            // 지난 달
+            let firstDay = getLastDayOfMonth(year, month - 1, 1).getDay();
+            for(let i = getLastDayOfMonth(year, month - 1).getDate(), j = 0; firstDay < 6 && j <= firstDay; j++){
+                $('.day').append(`<li class="inactive">${i - (firstDay - j)}</li>`);
+            }
+            // 현재 달
+            for(let i = 1, idx = 0; i <= lastDayOfMonth; i++){
+                let li = $('<li>').text(i);
+                if(i == date){
+                    li.addClass('active');
+                }
+                
+                if(idx < log.length && year == log[idx][0] && month == log[idx][1] && i == log[idx][2]){
+                    li.addClass('log');
+                    idx++;
+                }
+                $('.day').append(li);
+            }
+            // 다음 달
+            let nextDay = getLastDayOfMonth(year, month).getDay();
+            for(let i = 1, j = nextDay; j < 6; j++){
+                $('.day').append(`<li class="inactive">${i++}</li>`);
+            }
+        }
+        $('.calendar-nav > .prev').click(function(){
+            $('.day').html('');
+            let newDate = new Date(curYear, curMonth-1);
+            curYear = newDate.getFullYear();
+            curMonth = newDate.getMonth();
+            setCalendar(curYear, curMonth, curDate);
+        });
+        $('.calendar-nav > .next').click(function(){
+            $('.day').html('');
+            let newDate = new Date(curYear, curMonth);
+            curYear = newDate.getFullYear();
+            curMonth = newDate.getMonth() + 1;
+            setCalendar(curYear, curMonth, curDate);
+        });
+        setCalendar(curYear, curMonth, curDate);
+        // 날짜 이동
+        $(document).on('click', '.day > li:not([class~="inactive"])', function(){
+            $('.day > li').removeClass('active');
+            $(this).addClass('active');
+        });
+        $(document).on('click', '.day > li.log', function(){
+            let itemNum = $(this).text();
+            $('.order-list').hide();
+            $('.empty').hide();
+            $(`#item${itemNum}`).show();
+        });
+        $(document).on('click', '.day > li:not([class~="log"])', function(){
+            $('.order-list').hide();
+            $('.empty').show();
+        });
+        $(document).on('click', '.day > li:not([class~="inactive"])', function(){
+            $('.date').text(`${curYear}년 ${curMonth}월 ${$(this).text()}일`);
+        });
+    </script>
+</body>
+</html>

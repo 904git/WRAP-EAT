@@ -1,0 +1,227 @@
+/* layout style */
+@media screen and (min-width: 1024px) {
+    /* header style */
+    header > .inner {
+        display: flex;
+        align-items: center;
+        height: 60px;
+    }
+    .header-icon a {
+        font-size: 20px;
+    }
+    /* index.html */
+    /* header style */
+    #index header > .flex {
+        flex-direction: column-reverse;
+    }
+    /* header search style */
+    .search-container {
+        margin: 35px auto auto;
+    }
+    .form-section input#mainSearch {
+        height: 24px;
+        line-height: 24px;
+        border-radius: 24px;
+        text-indent: 10px;
+    }
+    #header-form a {
+        right: 10px;
+    }
+    #header-form:hover .form-section input#mainSearch,
+    .form-section input#mainSearch:active,
+    .form-section input#mainSearch:focus {
+        width: 200px;
+    }
+    /* banner container style */
+    #mainBanner {
+        margin: 0 0 45px;
+    }
+    #mainBanner .inner {
+        width: 100%;
+        margin: 0;
+        max-width: unset;
+    }
+    .banner-box img { /* desktop */
+        width: 100%;
+        border-radius: 0;
+    }
+    .banner-box > a {
+        height: 480px;
+        border-radius: 0;
+    }
+    .banner-cnt {
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        right: 50%;
+        bottom: 10px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        transform: translateX(50%);
+    }
+    /* main content style */
+    #index main section { /* desktop */
+        margin-bottom: 80px;
+    }
+    main section h3 { /* desktop */
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    /* lnb category style (wrap) */
+    #lnb .category-container > li { /* desktop */
+        width: calc((100% - (20px * 7)) / 8);
+        flex-shrink: 0;
+        text-align: center;
+    }
+    /* map style */
+    .map-container {
+        height: 300px;
+    }
+    /* regular, recently style */
+    .restaurant-container { /* desktop */
+        gap: 40px;
+        flex-wrap: nowrap;
+    }
+    .restaurant-box { /* desktop */
+        font-weight: 500;
+        width: 230px;
+    }
+    .restaurant-box img { /* desktop */
+        width: 230px;
+        height: 140px;
+        margin-bottom: 10px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    /* sale style */
+    .sale-box { /* desktop */
+        width: 500px;
+        height: 200px;
+        flex-shrink: 0;
+    }
+    /* footer style */
+    .company-info {
+        overflow: hidden;
+    }
+    .company-info > dd {
+        float: left;
+        position: relative;
+        padding: 0 15px;
+
+    }
+    .company-info > dd::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 14px;
+        background: var(--gray-solid-color);
+        position: absolute;
+        right: 0;
+        top: 4px;
+    }
+    .company-info > dd:nth-child(even) {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .company-info > dd:nth-child(odd)::after {
+        display: none;
+    }
+    /* bookmark.html */
+    /* restaurant-list */
+    .restaurant-list { /* desktop */
+        padding-top: 30px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .restaurant-list > li { /* desktop */
+        width: calc((100% - (20px * 2)) / 3);
+        max-width: 345px;
+    }
+    .restaurant-list > li > a { /* desktop */
+        background: #fff;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        position: relative;
+        display: block;
+    }
+    .restaurant-list > li > a img { /* 식당 썸네일 */ /* desktop */
+        width: 100%;
+        height: 150px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        object-fit: cover;
+    }
+    .restaurant-list > li .restaurant-info { /* desktop */
+        padding: 10px 15px 15px;
+    }
+    .sale-label { /* 할인 라벨 */ /* desktop */
+        background: url(../images/label.png) no-repeat 0 0;
+        background-size: contain;
+        width: 170px;
+        height: 20px;
+        line-height: 20px;
+        text-indent: 10px;
+        font-size: 10px;
+        color: var(--sub-text-color);
+    }
+    /* calendar.html */
+    /* calendar style */
+    #calendar main { /* desktop */
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+    .calendar-container { /* desktop */
+        background: var(--main-primary-color);
+        color: var(--sub-text-color);
+        padding: 15px 10px;
+        width: 800px;
+    }
+    /* cart.html */
+    .cart-container { /* desktop */
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .cart-container .cart-top { /* desktop */
+        width: 800px;
+    }
+    .cart-bottom > .btn { /* desktop */
+        margin: 0 auto;
+    }
+    /* order.html */
+    #order > main .inner { /* desktop */
+        display: flex;
+        gap: 20px;
+    }
+    .order-top { /* desktop */
+        padding-top: 10px;
+        width: 800px;
+    }
+    .order-bottom { /* desktop */
+        padding-top: 10px;
+        padding-bottom: 100px;
+    }
+    /* receipt style */
+    .receipt-head > p:nth-child(2),
+    .receipt > .menu-list > li > *:nth-child(2) { /* desktop */
+        margin-left: auto;
+    }
+    .receipt-head > p:last-child,
+    .receipt > .menu-list > li > *:last-child { /* desktop */
+        width: 200px;
+        flex-shrink: 0;
+        text-align: right;
+    }
+    /* reward.html */
+    .reward-container {
+        padding-bottom: 150px;
+    }
+}

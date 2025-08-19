@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRAP-EAT</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body id="cart">
+    <header>
+        <div class="inner">
+            <div id="headerTop">
+                <p>장바구니</p>
+                <div class="header-icon flex">
+                    <div class="header-left-icon">
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                    </div>
+                    <div class="header-right-icon flex">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="restaurant">
+            <div class="inner">
+                <a href="detail.html" class="restaurant-profile flex">
+                    <img src="images/restaurant/sosobrunch.jpg" alt="소소한 브런치">
+                    <p>소소한 브런치</p>
+                </a>
+            </div>
+        </div>
+        <div class="inner cart-container">
+            <section class="cart-top">
+                <ul class="menu-list">
+                    <li>
+                        <img src="images/detail/menu1.jpg" alt="새우 & 크림 뇨끼">
+                        <p>새우 & 크림 뇨끼(SHRIMP GNOCCHI)</p>
+                        <ul class="option">
+                            <li>가격: 16,000원</li>
+                            <li>피클 추가선택: 피클 (700원)</li>
+                            <li>음료 추가선택: 아메리카노 (3,500원)</li>
+                        </ul>
+                        <p class="price">20,200원</p>
+                        <div class="option-btn flex">
+                            <a href="#" class="">옵션 변경</a>
+                            <div class="count flex">
+                                <span class="cnt-down"><i class="fa-solid fa-trash"></i></span>
+                                <p>1</p>
+                                <span class="cnt-up"><i class="fa-solid fa-plus"></i></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/detail/menu3.jpg" alt="소소브런치 + 아메리카노 세트">
+                        <p>소소브런치 + 아메리카노 세트</p>
+                        <ul class="option">
+                            <li>가격: 12,000원</li>
+                            <li>계란 선택: 반숙 후라이(SUNNY SIDE UP)</li>
+                            <li>음료 선택: 아이스 / 디카페인 (500원)</li>
+                            <li>세트브런치 음료 선택: 바닐라라떼 (1,300원)</li>
+                        </ul>
+                        <p class="price">13,800원</p>
+                        <div class="option-btn flex">
+                            <a href="#" class="change">옵션 변경</a>
+                            <div class="count flex">
+                                <span class="cnt-down"><i class="fa-solid fa-minus"></i></span>
+                                <p>2</p>
+                                <span class="cnt-up"><i class="fa-solid fa-plus"></i></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="add-menu-btn"><a href="#">+ 메뉴 추가</a></p>
+            </section>
+            <section class="cart-bottom">
+                <div class="price-container">
+                    <div class="menu-price flex">
+                        <p>메뉴금액</p>
+                        <p>47,800원</p>
+                    </div>
+                    <div class="sale-price flex">
+                        <p>할인금액</p>
+                        <p>0원</p>
+                    </div>
+                    <div class="total-price flex">
+                        <p>결제금액</p>
+                        <p>47,800원</p>
+                    </div>
+                </div>
+                <a href="order.html" class="btn btn-round btn-large btn-primary-bg">주문하기</a>
+            </section>
+        </div>
+    </main>
+    <script>
+        $('.cnt-down').click(function(){
+            let product_cnt = parseInt($(this).siblings('p').text());
+            if(product_cnt == 2) {
+                $(this).children().removeClass('fa-minus');
+                $(this).children().addClass('fa-trash');
+            }
+            if(0 < product_cnt - 1){
+                $(this).siblings('p').text(product_cnt-1);
+            }
+        });
+        $('.cnt-up').click(function(){
+            let product_cnt = parseInt($(this).siblings('p').text());
+            $(this).siblings('.cnt-down').children().addClass('fa-minus');
+            $(this).siblings('.cnt-down').children().removeClass('fa-trash');
+            $(this).siblings('p').text(product_cnt + 1);
+        });
+    </script>
+</body>
+</html>
