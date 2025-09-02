@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRAP-EAT</title>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=49b3567591218552df61caea514da4f7"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body id="index">
+    <header>
+        <div class="inner flex">
+            <div id="headerTop">
+                <div class="header-icon flex">
+                    <div class="header-left-icon">
+                        <a href="#" class="location flex">
+                            <i class="fa-solid fa-crosshairs fa-fw"></i>
+                            <p>우리집</p>
+                        </a>
+                    </div>
+                    <div class="header-right-icon flex">
+                        <a href="#"><i class="fa-solid fa-bell fa-fw"></i></a>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-fw"></i></a>
+                    </div>
+                </div>
+            </div>
+            <section class="search-container">
+                <a href="#" id="mainLogo">
+                    <img src="images/logo-3d.png" alt="WRAP-EAT" width="215">
+                    <img src="images/character/character-search.png" alt="WRAP-EAT 캐릭터" width="53">
+                </a>
+                <form action="" method="post">
+                    <input type="search" id="mainSearch" placeholder="오늘은 치킨이닭!">
+                    <input type="image" id="searchBtn" src="images/icon/search.png">
+                </form>
+            </section>
+        </div>
+    </header>
+    <nav id="gnb">
+        <div class="inner">
+            <ul class="flex">
+                <li>
+                    <a href="index.html" class="active">
+                        <i class="fa-solid fa-house"></i>
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="status.html">
+                        <i class="fa-solid fa-map"></i>
+                        <p>지도</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="bookmark.html">
+                        <i class="fa-solid fa-heart"></i>
+                        <p>찜</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendar.html">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <p>주문내역</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                        <p>마이랩잇</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="mainBanner">
+        <div class="inner banner-container">
+            <ul class="banner-list flex" id="bannerList">
+                <li class="banner-box" id="banner1">
+                    <a href="#" ></a> <!-- 최대 15% 할인 -->
+                </li>
+                <li class="banner-box" id="banner2">
+                    <a href="#" ></a> <!-- 깜짝 쿠폰 -->
+                </li>
+                <li class="banner-box" id="banner3">
+                    <a href="reward.html" ></a> <!-- 다회용기 -->
+                </li>
+                <li class="banner-box" id="banner4">
+                    <a href="#" ></a> <!-- 신규회원 할인 -->
+                </li>
+                <li class="banner-box" id="banner5">
+                    <a href="#" ></a> <!-- 복날 할인 -->
+                </li>
+            </ul>
+            <div class="banner-cnt">
+                <span class="banner-left" id="bannerLeftBtn"><i class="fa-solid fa-angle-left"></i></span>
+                <p>1 / 5</p>
+                <span class="banner-right" id="bannerRightBtn"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="inner">
+            <section id="lnb">
+                <h3>음식 포장</h3>
+                <ul class="flex category-container">
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/All.png" alt="전체">
+                            <p>전체</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/SnackFood.png" alt="분식">
+                            <p>분식</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/FastFood.png" alt="패스트푸드">
+                            <p>패스트푸드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/ChinaFood.png" alt="중식">
+                            <p>중식</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/JapanFood.png" alt="돈까스,회">
+                            <p>돈까스,회</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/KoreaFood.png" alt="한식">
+                            <p>한식</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/Chicken.png" alt="치킨">
+                            <p>치킨</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/Pizza.png" alt="피자">
+                            <p>피자</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/WesternFood.png" alt="양식">
+                            <p>양식</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/Desert.png" alt="디저트">
+                            <p>디저트</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/Soup.png" alt="찜,탕">
+                            <p>찜,탕</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/Bossam.png" alt="족발,보쌈">
+                            <p>족발,보쌈</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/Pork.png" alt="고기">
+                            <p>고기</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/Asian.png" alt="아시안">
+                            <p>아시안</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/Night.png" alt="야식">
+                            <p>야식</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="restaurants.html">
+                            <img src="images/icon/Packed.png" alt="도시락">
+                            <p>도시락</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section id="map">
+                <h3>내 근처에서 찾아보기</h3>
+                <div class="map-container" id="map-container">
+
+                </div>
+            </section>
+            <section id="regular">
+                <h3>내 단골 식당</h3>
+                <ul class="restaurant-container flex">
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/subway.jpg" alt="써브웨이 신대방삼거리점">
+                            <div class="flex">
+                                <h4>써브웨이 신대방삼거리점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    4.8
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                332m 도보 5분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/salmon.png" alt="육회랑연어랑">
+                            <div class="flex">
+                                <h4>육회랑연어랑</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    4.8
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                268m 도보 4분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/sosobrunch.jpg" alt="소소한 브런치">
+                            <div class="flex">
+                                <h4>소소한 브런치</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    5.0
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                309m 도보 4분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/tteokbokki.gif" alt="동대문 엽기떡볶이 신대방삼거리역점">
+                            <div class="flex">
+                                <h4>동대문 엽기떡볶이 신대방삼거리역점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    5.0
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                130m 도보 1분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/pizza.jpg" alt="발리스 피자">
+                            <div class="flex">
+                                <h4>발리스 피자</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    5.0
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                514m 도보 11분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/pastabang.jpg" alt="파스타 뱅 상도점">
+                            <div class="flex">
+                                <h4>파스타 뱅 상도점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    4.9
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                192m 도보 2분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/poke.jpg" alt="파머스포케 노량진점">
+                            <div class="flex">
+                                <h4>파머스포케 노량진점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    4.9
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                688m 도보 17분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/diet.jpg" alt="프레퍼스 다이어트푸드 노량진점">
+                            <div class="flex">
+                                <h4>프레퍼스 다이어트푸드 노량진점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    5.0
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                695m 도보 17분
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+                <!-- <div class="restaurant-btn flex">
+                    <span class="btn-left" id="restaurantLeftBtn"><i class="fa-solid fa-angle-left"></i></span>
+                    <span class="btnright" id="restaurantRightBtn"><i class="fa-solid fa-angle-right"></i></span>
+                </div> -->
+            </section>
+            <section id="recently">
+                <h3>최근 주문한 식당</h3>
+                <ul class="restaurant-container flex">
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/tteokbokki.gif" alt="동대문 엽기떡볶이 신대방삼거리역점">
+                            <div class="flex">
+                                <h4>동대문 엽기떡볶이 신대방삼거리역점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    5.0
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                130m 도보 1분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/sosobrunch.jpg" alt="소소한 브런치">
+                            <div class="flex">
+                                <h4>소소한 브런치</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    5.0
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                309m 도보 4분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/salmon.png" alt="육회랑연어랑">
+                            <div class="flex">
+                                <h4>육회랑연어랑</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    4.8
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                268m 도보 4분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/subway.jpg" alt="써브웨이 신대방삼거리점">
+                            <div class="flex">
+                                <h4>써브웨이 신대방삼거리점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    4.8
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                332m 도보 5분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/diet.jpg" alt="프레퍼스 다이어트푸드 노량진점">
+                            <div class="flex">
+                                <h4>프레퍼스 다이어트푸드 노량진점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    5.0
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                695m 도보 17분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/pastabang.jpg" alt="파스타 뱅 상도점">
+                            <div class="flex">
+                                <h4>파스타 뱅 상도점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    4.9
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                192m 도보 2분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/pizza.jpg" alt="발리스 피자">
+                            <div class="flex">
+                                <h4>발리스 피자</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    5.0
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                514m 도보 11분
+                            </p>
+                        </a>
+                    </li>
+                    <li class="restaurant-box">
+                        <a href="#">
+                            <img src="images/restaurant/poke.jpg" alt="파머스포케 노량진점">
+                            <div class="flex">
+                                <h4>파머스포케 노량진점</h4>
+                                <p class="score">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    4.9
+                                </p>
+                            </div>
+                            <p class="distance">
+                                <i class="fa-solid fa-map-pin"></i>
+                                688m 도보 17분
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section id="sale">
+                <h3>오늘의 할인</h3>
+                <ul class="sale-container flex">
+                    <li class="sale-box">
+                        <a href="#">
+                            <img src="images/banner/chicken.png" alt="매주 금요일 굽네치킨 3000원 할인">
+                        </a>
+                    </li>
+                    <li class="sale-box">
+                        <a href="#">
+                            <img src="images/banner/poke.png" alt="포케올데이 정기 픽업 주문 가능">
+                        </a>
+                    </li>
+                    <li class="sale-box">
+                        <a href="#">
+                            <img src="images/banner/pizza.png" alt="피자 알볼로 최대 10000원 할인">
+                        </a>
+                    </li>
+                    <li class="sale-box">
+                        <a href="#">
+                            <img src="images/banner/burger.png" alt="버거킹 신메뉴 10% 할인 쿠폰">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="inner">
+            <dl class="company-info">
+                <dt>(주)WRAP-EAT</dt>
+                <dd>대표이사 정혜지</dd>
+                <dd>사업자등록번호 012-34-56789</dd>
+                <dd>통신판매업 2025-서울관악-0000</dd>
+                <dd>호스팅서비스제공자 (주)WRAP-EAT</dd>
+                <dd>WRAP_EAT@eatwrap.com</dd>
+                <dd>서울특별시 관악구 남부순환로 1633 8층</dd>
+                <dd>Tel 1234-5678(유료), 080-987-6543(무료)</dd>
+                <dd>Fax 012-3456-7890</dd>
+            </dl>
+        </div>
+    </footer>
+    <script>
+        var $bannerWidth = $('.banner-container').width();
+        var $bannerCnt = $('.banner-list > li').length;
+        var $bannerIndex = 0;
+
+        $('.banner-box > a').each(function(i, e){
+            $(this).css('background', `url(images/banner/banner${i + 1}.gif) no-repeat 50% 50%`);
+            $(this).css('background-size', `cover`);
+        });
+
+        $(function(){
+            $(window).resize(function(){
+                $bannerWidth = $('.banner-container').width();
+                $bannerIndex = bannerMoveRight($bannerIndex-1);
+            });
+        });
+        function bannerMoveLeft(index) {
+            index = index - 1 < 0? $bannerCnt - 1 : index - 1;
+            $('#bannerList').css('transform', `translateX(${-1 * $bannerWidth * index}px)`);
+            $('.banner-cnt > p').text((index + 1)+' / '+$bannerCnt);
+            return index;
+        }
+        function bannerMoveRight(index) {
+            index = index + 1 < $bannerCnt? index + 1 : 0;
+            $('#bannerList').css('transform', `translateX(${-1 * $bannerWidth * index}px)`);
+            $('.banner-cnt > p').text((index + 1)+' / '+$bannerCnt);
+            return index;
+        }
+        // 배너 클릭 시 이동
+        $('#bannerLeftBtn').click(function(){
+            $bannerIndex = bannerMoveLeft($bannerIndex);
+        });
+        $('#bannerRightBtn').click(function(){
+            $bannerIndex = bannerMoveRight($bannerIndex);
+        });
+        // 배너 자동으로 넘김
+        const getInterval = () => {
+            return setInterval(() => {
+                $bannerIndex = bannerMoveRight($bannerIndex);
+            }, 6000);
+        }
+
+        let interval = getInterval(); // interval 등록
+        
+        var mapContainer = document.getElementById('map-container'), // 지도를 표시할 div 
+		    mapOption = {
+		        center: new kakao.maps.LatLng(37.484790, 126.932331), // 지도의 중심좌표
+		        level: 3, // 지도의 확대 레벨
+		        mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+		    }; 
+
+		// 지도를 생성한다 
+		var map = new kakao.maps.Map(mapContainer, mapOption);
+    </script>
+</body>
+</html>

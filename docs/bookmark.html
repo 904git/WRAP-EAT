@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRAP-EAT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body id="bookmark">
+    <header>
+        <div class="inner">
+            <div id="headerTop">
+                <p>찜</p>
+                <div class="header-icon flex">
+                    <div class="header-left-icon">
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                    </div>
+                    <div class="header-right-icon flex">
+                        <form action="" method="post" id="header-form" class="flex">
+                            <div class="form-section">
+                                <input type="text" id="mainSearch" placeholder="SEARCH">
+                                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                         </form>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-fw"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="gnb">
+        <div class="inner">
+            <ul class="flex">
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="status.html">
+                        <i class="fa-solid fa-map"></i>
+                        <p>지도</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="bookmark.html" class="active">
+                        <i class="fa-solid fa-heart"></i>
+                        <p>찜</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendar.html">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <p>주문내역</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+                        <p>마이랩잇</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="inner">
+            <ul class="restaurant-list">
+                <li>
+                    <a href="detail.html" class="flex">
+                        <img src="images/restaurant/sosobrunch.jpg" alt="소소한 브런치">
+                        <div class="restaurant-info">
+                            <h4>소소한 브런치</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>131</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>309m 도보 4분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <div class="sale-label">3000원 할인 쿠폰</div>
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex">
+                        <img src="images/restaurant/pizza.jpg" alt="발리스 피자">
+                        <div class="restaurant-info">
+                            <h4>발리스 피자</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>502</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>514m 도보 11분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <div class="sale-label">5000원 할인 쿠폰</div>
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex">
+                        <img src="images/restaurant/pastabang.jpg" alt="파스타 뱅 상도점">
+                        <div class="restaurant-info">
+                            <h4>파스타 뱅 상도점</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>4.9</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>507</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>192m 도보 2분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <div class="sale-label">5000원 할인 쿠폰</div>
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex">
+                        <img src="images/restaurant/poke.jpg" alt="파머스포케 노량진점">
+                        <div class="restaurant-info">
+                            <h4>파머스포케 노량진점</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>4.9</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>414</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>688m 도보 17분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <div class="sale-label">전 메뉴 5% 할인</div>
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="detail.html" class="flex">
+                        <img src="images/restaurant/shackshack.jpg" alt="쉐이크쉑 신림점">
+                        <div class="restaurant-info">
+                            <h4>쉐이크쉑 신림점</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>4.4</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,124</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>335m 도보 4분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <div class="sale-label">5000원 할인 쿠폰</div>
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex">
+                        <img src="images/restaurant/diet.jpg" alt="프레퍼스 다이어트푸드 노량진점">
+                        <div class="restaurant-info">
+                            <h4>프레퍼스 다이어트푸드 노량진점</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>1,800</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>695m 도보 17분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex">
+                        <img src="images/restaurant/cake.jpg" alt="케이크무드">
+                        <div class="restaurant-info">
+                            <h4>케이크무드</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>84</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>812m 도보 19분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex">
+                        <img src="images/restaurant/lotto.jpg" alt="로또수산 노량진수산시장">
+                        <div class="restaurant-info">
+                            <h4>로또수산 노량진수산시장</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>142</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>110m 도보 1분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="detail.html" class="flex">
+                        <img src="images/restaurant/chunli.png" alt="춘리마라탕 신림역점">
+                        <div class="restaurant-info">
+                            <h4>춘리마라탕 신림역점</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>4.7</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>3,872</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>789m 도보 8분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex">
+                        <img src="images/restaurant/coffee.jpg" alt="더머커피">
+                        <div class="restaurant-info">
+                            <h4>더머커피</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>5.0</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>705</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>339m 도보 5분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <div class="sale-label">최대 10% 할인</div>
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex">
+                        <img src="images/restaurant/cookie.jpg" alt="스트렝스커피 여의도점">
+                        <div class="restaurant-info">
+                            <h4>스트렝스커피 여의도점</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>4.9</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>29</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>889m 도보 18분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <div class="sale-label">최대 10% 할인</div>
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="detail.html" class="flex">
+                        <img src="images/restaurant/subway.jpg" alt="써브웨이 신림점">
+                        <div class="restaurant-info">
+                            <h4>써브웨이 신림점</h4>
+                            <div class="review-info flex">
+                                <p><span class="star"><i class="fa-solid fa-star"></i></span>4.3</p>
+                                <p><span class="comment"><i class="fa-solid fa-comment-dots"></i></span>2,629</p>
+                                <p><span><i class="fa-solid fa-map-pin"></i></span>689m 도보 8분</p>
+                            </div>
+                            <div class="info-bottom flex">
+                                <div class="sale-label">3000원 할인 쿠폰</div>
+                                <span class="heart active"><i class="fa-solid fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

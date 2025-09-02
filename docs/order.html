@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRAP-EAT</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    </style>
+</head>
+<body id="order">
+    <header>
+        <div class="inner">
+            <div id="headerTop">
+                <p>주문하기</p>
+                <div class="header-icon flex">
+                    <div class="header-left-icon">
+                        <a href="cart.html">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                    </div>
+                    <div class="header-right-icon flex">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="inner">
+            <section class="order-top">
+                <ul class="order-container">
+                    <li>
+                        <h3>내 연락처</h3>
+                        <p class="user-phone">010 - 0000 - 0000</p>
+                        <span class="angle"><i class="fa-solid fa-angle-right"></i></span>
+                    </li>
+                    <li class="receipt-container">
+                        <div class="restaurant-info flex">
+                            <div class="restaurant-profile flex">
+                                <img src="images/restaurant/sosobrunch.jpg" alt="소소한 브런치">
+                                <p>소소한 브런치</p>
+                            </div>
+                        </div>
+                        <div class="receipt">
+                            <div class="flex receipt-head">
+                                <p>메뉴</p>
+                                <p>수량</p>
+                                <p>가격</p>
+                            </div>
+                            <ul class="menu-list">
+                                <li class="flex">
+                                    <div class="menu">
+                                        <p class="menu-name">새우 & 크림 뇨끼(SHRIMP GNOCCHI)</p>
+                                        <ul class="menu-option">
+                                            <li>가격: 16,000원</li>
+                                            <li>피클 추가선택: 피클 (700원)</li>
+                                            <li>음료 추가선택: 아메리카노 (3,500원)</li>
+                                        </ul>
+                                    </div>
+                                    <p>1개</p>
+                                    <p>20,200원</p>
+                                </li>
+                                <li class="flex">
+                                    <div class="menu">
+                                        <p class="menu-name">소소브런치 + 아메리카노 세트</p>
+                                        <ul class="menu-option">
+                                            <li>가격: 12,000원</li>
+                                            <li>계란 선택: 반숙 후라이(SUNNY SIDE UP)</li>
+                                            <li>음료 선택: 아이스 / 디카페인 (500원)</li>
+                                            <li>세트브런치 음료 선택: 바닐라라떼 (1,300원)</li>
+                                        </ul>
+                                    </div>
+                                    <p>2개</p>
+                                    <p>13,800원</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>가게 요청사항</h3>
+                        <p>요청사항 없음</p>
+                        <span class="angle"><i class="fa-solid fa-angle-right"></i></span>
+                    </li>
+                    <li>
+                        <h3>결제 수단</h3>
+                        <form action="" method="post" id="paymentForm">
+                            <ul class="form-section">
+                                <li class="flex">
+                                    <input type="radio" name="payment" value="card" id="payment_card" checked>
+                                    <label for="payment_card">신용/체크카드</label>
+                                    <span class="flex">선택 <i class="fa-solid fa-angle-right"></i></span>
+                                </li>
+                                <li class="flex">
+                                    <input type="radio" name="payment" value="toss" id="payment_toss">
+                                    <label for="payment_toss">토스페이</label>
+                                </li>
+                                <li class="flex">
+                                    <input type="radio" name="payment" value="kakaopay" id="payment_kakaopay">
+                                    <label for="payment_kakaopay">카카오페이</label>
+                                </li>
+                                <li class="flex">
+                                    <input type="radio" name="payment" value="naverpay" id="payment_naverpay">
+                                    <label for="payment_naverpay">네이버페이</label>
+                                </li>
+                                <li class="flex">
+                                    <input type="radio" name="payment" value="etc" id="payment_etc">
+                                    <label for="payment_etc">기타 결제수단</label>
+                                </li>
+                            </ul>
+                        </form>
+                        <a href="#"><span class="description">카드 일반결제 혜택 보기 ></span></a>
+                    </li>
+                    <li>
+                        <h3>할인 쿠폰</h3>
+                        <div class="select-form flex">
+                            <p>3000원 할인</p>
+                            <span><i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>픽업 시간 예약</h3>
+                        <div class="select-form flex" id="reservateBtn">
+                            <p>픽업 가능 시간</p>
+                            <span><i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                        <span class="description">픽업 시간은 주문 시간 1시간 후부터 예약 가능합니다.</span>
+                    </li>
+                    <li>
+                        <h3>음식 포장 용기</h3>
+                        <div class="select-form flex" id="packageBtn">
+                            <p>포장 용기 선택</p>
+                            <span><i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                        <span class="description">다회용 포장 용기(개인용) 선택시 픽업시간 10분 전에 방문 부탁드립니다.</span>
+                    </li>
+                </ul>
+            </section>
+            <section class="order-bottom">
+                <div class="price-container">
+                    <div class="flex menu-price">
+                        <p>메뉴금액</p>
+                        <p>47,800원</p>
+                    </div>
+                    <div class="flex sale-price">
+                        <p>할인금액</p>
+                        <p>-3,000원</p>
+                    </div>
+                    <ul class="sale-list">
+                        <li class="flex">
+                            <p>첫 주문 할인쿠폰</p>
+                            <p>-3,000원</p>
+                        </li>
+                    </ul>
+                    <div class="flex total-price">
+                        <p>결제금액</p>
+                        <p>43,800원</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-large btn-round btn-primary-bg">43,800원 결제하기</a>
+            </section>
+        </div>
+    </main>
+    <div class="option-modal time">
+        <div class="modal-bg"></div>
+        <div class="sort-option inner">
+            <p>예약 시간</p>
+            <form action="" method="post" id="timeForm">
+                <div class="form-section">
+                    <label for="reservateTime">시간 선택</label>
+                    <input type="time" id="reservateTime">
+                </div>
+                <div class="form-section flex">
+                    <input type="button" value="예약취소" id="cancleBtn" class="btn btn-round btn-small btn-primary-border">
+                    <input type="button" value="확인" id="submitBtn" class="btn btn-round btn-small btn-primary-bg">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="option-modal package">
+        <div class="modal-bg"></div>
+        <div class="package-option inner">
+            <p>포장 용기</p>
+            <ul>
+                <li class="active">일회용 포장 용기<span><i class="fa-solid fa-check"></i></span></li>
+                <li>다회용 포장 용기(매장용)<span><i class="fa-solid fa-check"></i></span></li>
+                <li>다회용 포장 용기(개인용)<span><i class="fa-solid fa-check"></i></span></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        /* 시간예약 버튼 클릭시 모달 이벤트 */
+        $('#submitBtn').click(function(e){
+            let time = $('#reservateTime').val().split(":");
+            let date = new Date();
+            let nowTime = date.getHours() * 60 + date.getMinutes();
+            if(nowTime + 60 <= parseInt(time[0]) * 60 + parseInt(time[1])){
+                // 현재 시각의 한시간 후이면 예약 가능
+                $('#reservateBtn > p').text(`${time[0]}시 ${time[1]}분`);
+                $('.option-modal.time').toggleClass('show');
+            }else{
+                alert('픽업 시간은 주문 시간 1시간 후부터 예약 가능합니다.');
+            }
+        });
+        $('#reservateBtn').click(function(){
+            $('.option-modal.time').toggleClass('show');
+        });
+        $('#cancleBtn').click(function(){
+            $('#reservateBtn > p').text('픽업 가능 시간');
+            $('#reservateTime').val(null);
+            $('.option-modal.time').toggleClass('show');
+        });
+        $('.option-modal.time .modal-bg').click(function(){
+            $('.option-modal.time').toggleClass('show');
+        });
+        /* 포장용기 버튼 선택시 모달 이벤트 */
+        $('#packageBtn').click(function(){
+            $('.option-modal.package').toggleClass('show');
+        });
+        $('.package-option > ul > li').click(function(){
+            $('.package-option > ul > li').removeClass('active');
+            $(this).addClass('active');
+            $('.option-modal.package').toggleClass('show');
+            $('#packageBtn > p').text($(this).text());
+        });
+        $('.option-modal.package .modal-bg').click(function(){
+            $('.option-modal.package').toggleClass('show');
+        });
+    </script>
+</body>
+</html>
